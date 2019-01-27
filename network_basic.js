@@ -34,7 +34,7 @@ layer_defs.push({
 
 var tdtrainer_options = {
     learning_rate: 0.001,
-    momentum: 0.0,
+    momentum: 0.1,
     batch_size: 16,
     l2_decay: 0.01
 };
