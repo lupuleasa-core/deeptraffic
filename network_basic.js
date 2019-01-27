@@ -5,10 +5,10 @@
 lanesSide = 1;
 patchesAhead = 10;
 patchesBehind = 0;
-trainIterations = 30000;
+trainIterations = 5000;
 
 // the number of other autonomous vehicles controlled by your network
-otherAgents = 3; // max of 10
+otherAgents = 8; // max of 10
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
