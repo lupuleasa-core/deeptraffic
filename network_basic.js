@@ -5,7 +5,7 @@
 lanesSide = 2;
 patchesAhead = 3;
 patchesBehind = 0;
-trainIterations = 15000;
+trainIterations = 45000;
 
 // the number of other autonomous vehicles controlled by your network
 otherAgents = 3; // max of 10
