@@ -2,16 +2,16 @@
 //<![CDATA[
 
 // a few things don't have var in front of them - they update already existing variables the game needs
-lanesSide = 3;
-patchesAhead = 6;
-patchesBehind = 2;
-trainIterations = 35000;
+lanesSide = 2;
+patchesAhead = 3;
+patchesBehind = 0;
+trainIterations = 15000;
 
 // the number of other autonomous vehicles controlled by your network
-otherAgents = 5; // max of 10
+otherAgents = 3; // max of 10
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
-var num_actions = 5;
+var num_actions = 4;
 var temporal_window = 5;
 var network_size = num_inputs * temporal_window + num_actions * temporal_window + num_inputs;
 
@@ -24,7 +24,7 @@ var layer_defs = [];
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 64,
+    num_neurons: 16,
     activation: 'relu'
 });
 layer_defs.push({
