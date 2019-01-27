@@ -5,7 +5,7 @@
 lanesSide = 1;
 patchesAhead = 10;
 patchesBehind = 0;
-trainIterations = 30000;
+trainIterations = 10000;
 
 // the number of other autonomous vehicles controlled by your network
 otherAgents = 3; // max of 10
@@ -28,11 +28,6 @@ layer_defs.push({
     activation: 'relu'
 });
 layer_defs.push({
-    type: 'fc',
-    num_neurons: 8,
-    activation: 'relu'
-});
-layer_defs.push({
     type: 'regression',
     num_neurons: num_actions
 });
@@ -40,7 +35,7 @@ layer_defs.push({
 var tdtrainer_options = {
     learning_rate: 0.001,
     momentum: 0.0,
-    batch_size: 64,
+    batch_size: 16,
     l2_decay: 0.01
 };
 
