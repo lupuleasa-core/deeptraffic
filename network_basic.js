@@ -23,6 +23,16 @@ var layer_defs = [];
 });
 layer_defs.push({
     type: 'fc',
+    num_neurons: 32,
+    activation: 'relu'
+});
+layer_defs.push({
+    type: 'fc',
+    num_neurons: 16,
+    activation: 'relu'
+});
+layer_defs.push({
+    type: 'fc',
     num_neurons: 16,
     activation: 'relu'
 });
