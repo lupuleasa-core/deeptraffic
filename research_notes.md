@@ -2,6 +2,13 @@
 
 **Findings**:
 
+29 Jan:
+- Having high epsilon (10%) is usually better than having no epsilon
+- Epsilon_min is the probability an agent takes a random action during training
+- There exists a sweet spot between the two. The agent must have an exploration incentive.
+
+26 Jan:
+
 - Discount rate refers to how highly the AI values future reward
 - Higher discount rate is better
 - More layers increase training time 
