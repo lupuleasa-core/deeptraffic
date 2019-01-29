@@ -51,7 +51,7 @@ var tdtrainer_options = {
 
 var opt = {};
 opt.temporal_window = temporal_window;
-opt.experience_size = 3000;
+opt.experience_size = 10000;
 opt.start_learn_threshold = 500;
 opt.gamma = 0.8;
 opt.learning_steps_total = 15000;
