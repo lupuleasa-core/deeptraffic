@@ -7,7 +7,7 @@ patchesBehind = 10;
 trainIterations = 10000;
 
 // the number of other autonomous vehicles controlled by your network
-otherAgents = 3; // max of 10
+otherAgents = 10; // max of 10
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
@@ -34,7 +34,7 @@ layer_defs.push({
 var tdtrainer_options = {
     learning_rate: 0.001,
     momentum: 0.0,
-    batch_size: 64,
+    batch_size: 16,
     l2_decay: 0.01
 };
 
@@ -43,9 +43,9 @@ opt.temporal_window = temporal_window;
 opt.experience_size = 3000;
 opt.start_learn_threshold = 500;
 opt.gamma = 0.7;
-opt.learning_steps_total = 10000;
-opt.learning_steps_burnin = 1000;
-opt.epsilon_min = 0.0;
+opt.learning_steps_total = 15000;
+opt.learning_steps_burnin = 2000;
+opt.epsilon_min = 0.01;
 opt.epsilon_test_time = 0.0;
 opt.layer_defs = layer_defs;
 opt.tdtrainer_options = tdtrainer_options;
