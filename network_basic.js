@@ -4,7 +4,7 @@
 lanesSide = 3;
 patchesAhead = 20;
 patchesBehind = 10;
-trainIterations = 10000;
+trainIterations = 30000;
 
 // the number of other autonomous vehicles controlled by your network
 otherAgents = 10; // max of 10
@@ -23,19 +23,10 @@ var layer_defs = [];
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 32,
-    activation: 'relu'
-});
-layer_defs.push({
-    type: 'fc',
     num_neurons: 16,
     activation: 'relu'
 });
-layer_defs.push({
-    type: 'fc',
-    num_neurons: 16,
-    activation: 'relu'
-});
+
 layer_defs.push({
     type: 'regression',
     num_neurons: num_actions
@@ -52,7 +43,7 @@ var opt = {};
 opt.temporal_window = temporal_window;
 opt.experience_size = 3000;
 opt.start_learn_threshold = 500;
-opt.gamma = 0.5;
+opt.gamma = 0.3;
 opt.learning_steps_total = 15000;
 opt.learning_steps_burnin = 2000;
 opt.epsilon_min = 0.01;
