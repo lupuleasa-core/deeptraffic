@@ -2,9 +2,9 @@
 
 // a few things don't have var in front of them - they update already existing variables the game needs
 lanesSide = 3;
-patchesAhead = 35;
-patchesBehind = 10;
-trainIterations = 10000;
+patchesAhead = 50;
+patchesBehind = 5;
+trainIterations = 20000;
 
 // the number of other autonomous vehicles controlled by your network
 otherAgents = 10; // max of 10
@@ -28,12 +28,12 @@ layer_defs.push({
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 32,
+    num_neurons: 64,
     activation: 'relu'
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 16,
+    num_neurons: 32,
     activation: 'relu'
 });
 
@@ -51,12 +51,12 @@ var tdtrainer_options = {
 
 var opt = {};
 opt.temporal_window = temporal_window;
-opt.experience_size = 4500;
+opt.experience_size = 3000;
 opt.start_learn_threshold = 500;
-opt.gamma = 0.8;
+opt.gamma = 0.95;
 opt.learning_steps_total = 15000;
 opt.learning_steps_burnin = 2000;
-opt.epsilon_min = 0.018;
+opt.epsilon_min = 0.01;
 opt.epsilon_test_time = 0.0;
 opt.layer_defs = layer_defs;
 opt.tdtrainer_options = tdtrainer_options;
