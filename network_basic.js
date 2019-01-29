@@ -2,7 +2,7 @@
 
 // a few things don't have var in front of them - they update already existing variables the game needs
 lanesSide = 3;
-patchesAhead = 20;
+patchesAhead = 35;
 patchesBehind = 10;
 trainIterations = 30000;
 
@@ -20,6 +20,16 @@ var layer_defs = [];
     out_sx: 1,
     out_sy: 1,
     out_depth: network_size
+});
+layer_defs.push({
+    type: 'fc',
+    num_neurons: 64,
+    activation: 'relu'
+});
+layer_defs.push({
+    type: 'fc',
+    num_neurons: 32,
+    activation: 'relu'
 });
 layer_defs.push({
     type: 'fc',
