@@ -33,22 +33,7 @@ layer_defs.push({
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 32,
-    activation: 'relu'
-});
-layer_defs.push({
-    type: 'fc',
-    num_neurons: 32,
-    activation: 'relu'
-});
-layer_defs.push({
-    type: 'fc',
-    num_neurons: 32,
-    activation: 'relu'
-});
-layer_defs.push({
-    type: 'fc',
-    num_neurons: 32,
+    num_neurons: 16,
     activation: 'relu'
 });
 
@@ -71,7 +56,7 @@ opt.start_learn_threshold = 500;
 opt.gamma = 0.8;
 opt.learning_steps_total = 15000;
 opt.learning_steps_burnin = 2000;
-opt.epsilon_min = 0.01;
+opt.epsilon_min = 0.1;
 opt.epsilon_test_time = 0.0;
 opt.layer_defs = layer_defs;
 opt.tdtrainer_options = tdtrainer_options;
